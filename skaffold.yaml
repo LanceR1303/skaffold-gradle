@@ -1,0 +1,22 @@
+apiVersion: skaffold/v2beta28
+kind: Config
+metadata:
+  name: springboot-skaffold
+build:
+  #tagPolicy:
+   # envTemplate:
+    #  template: "{{.VERSION}}"
+  artifacts:
+  - image: bonescorp/skaffold-gradle
+    custom:
+      buildCommand: gradlew clean build buildImage
+deploy:
+  kubectl:
+    manifests:
+    - kubernetes.yaml
+#portForward:
+ # - resourceType: pod
+  #  resourceName: skafford-gradle
+   # namespace: default
+   # port: 8080
+   # localPort: 8080

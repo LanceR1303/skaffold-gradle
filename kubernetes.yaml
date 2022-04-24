@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: skafford-gradle
+  labels:
+    app: skafford-gradle
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: skafford-gradle
+  template:
+    metadata:
+      labels:
+        app: skafford-gradle
+    spec:
+      containers:
+        - name: skafford-gradle
+          image: bonescorp/skaffold-gradle:1
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8080
