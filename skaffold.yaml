@@ -19,7 +19,6 @@ deploy:
         - host:
             command: [ "cmd.exe", "/C", "test.bat" ]
             os: [ windows ]
-
 #portForward:
  # - resourceType: pod
   #  resourceName: skafford-gradle
