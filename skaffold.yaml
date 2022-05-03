@@ -14,6 +14,13 @@ deploy:
   kubectl:
     manifests:
     - kubernetes.yaml
+    #hooks:
+     # after:
+      #  - container:
+      #      command: [ "curl", "-v", "http://localhost:8080/actuator" ]
+      #      podName: skafford-gradle-*
+      #      containerName: skafford-gradle
+
 #portForward:
  # - resourceType: pod
   #  resourceName: skafford-gradle
