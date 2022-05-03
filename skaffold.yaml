@@ -16,10 +16,9 @@ deploy:
     - kubernetes.yaml
     hooks:
       after:
-        - container:
-            command: [ "curl", "-sS", "http://localhost:1000/actuator/health" ]
-            podName: skaffold-gradle-*
-            containerName: skaffold-gradle
+        - host:
+            command: [ "cmd.exe", "/C", "test.bat" ]
+            os: [ windows ]
 
 #portForward:
  # - resourceType: pod
