@@ -16,7 +16,7 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test1s2'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test1ss2'
 }
 
 tasks.named('test') {
