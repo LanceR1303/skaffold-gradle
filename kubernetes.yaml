@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: skafford-gradle
+  name: skaffold-gradle
   labels:
-    app: skafford-gradle
+    app: skaffold-gradle
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: skafford-gradle
+      app: skaffold-gradle
   template:
     metadata:
       labels:
-        app: skafford-gradle
+        app: skaffold-gradle
     spec:
       containers:
-        - name: skafford-gradle
+        - name: skaffold-gradle
           image: bonescorp/skaffold-gradle:latest
           imagePullPolicy: Never
           ports:
