@@ -8,7 +8,7 @@ public class HelloWorldController {
 
     @GetMapping("/hello")
     public String index() {
-        return "Greetings from Spring Boot! Testing Skaffold Variae";
+        return "Greetings from Spring Boot! Testing Skaffold Variable";
     }
 
 }
